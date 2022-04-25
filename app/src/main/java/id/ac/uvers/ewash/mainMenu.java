@@ -7,13 +7,15 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.List;
 
 import id.ac.uvers.ewash.Adapter.adapterC;
-import id.ac.uvers.ewash.model.laundrylist.laundrylist;
-import id.ac.uvers.ewash.model.laundrylist.responlaundrylist;
+import id.ac.uvers.ewash.model.response.laundrylist.LaundrylistsItem;
+import id.ac.uvers.ewash.model.response.laundrylist.Responselaundrylist;
 import id.ac.uvers.ewash.retrofit.ApiEndpoint;
 import id.ac.uvers.ewash.retrofit.ApiService;
 import retrofit2.Call;
@@ -25,8 +27,9 @@ public class mainMenu extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adp ;
     private RecyclerView.LayoutManager lmrc;
-    private List<laundrylist> listln;
+    private List<LaundrylistsItem> listln;
     private SwipeRefreshLayout refreshdata;
+    ImageView account, history;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +40,8 @@ public class mainMenu extends AppCompatActivity {
         refreshdata = findViewById(R.id.swprf);
         lmrc = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(lmrc);
-
-
+        account = findViewById(R.id.btnprofilll);
+        history = findViewById(R.id.btnhistoryll);
 
         refreshdata.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -46,6 +49,13 @@ public class mainMenu extends AppCompatActivity {
                 refreshdata.setRefreshing(true);
                 tp_data();
                 refreshdata.setRefreshing(false);
+            }
+        });
+
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
 
@@ -59,24 +69,23 @@ public class mainMenu extends AppCompatActivity {
 
     public void tp_data () {
         ApiEndpoint apidata =  ApiService.getClient().create(ApiEndpoint.class);
-        Call<responlaundrylist> tdata = apidata.lnlist();
+        Call<Responselaundrylist> tdata = apidata.lnlist();
 
-        tdata.enqueue(new Callback<responlaundrylist>() {
+        tdata.enqueue(new Callback<Responselaundrylist>() {
             @Override
-            public void onResponse(Call<responlaundrylist> call, Response<responlaundrylist> response) {
-                int id_laundry = response.body().getId_laundry();
+            public void onResponse(Call<Responselaundrylist> call, Response<Responselaundrylist> response) {
+                int id_laundry = response.body().getIdLaundry();
                 String msg = response.body().getMsg();
 
                 listln = response.body().getLaundrylists();
                 adp = new adapterC(mainMenu.this,listln);
                 recyclerView.setAdapter(adp);
-
             }
 
             @Override
-            public void onFailure(Call<responlaundrylist> call, Throwable t) {
+            public void onFailure(Call<Responselaundrylist> call, Throwable t) {
                 Toast.makeText(mainMenu.this, "GAGAL KONEK"+t.getMessage(), Toast.LENGTH_LONG).show();
-                Log.e("Error.Response", t.toString());
+                Log.e("Error.ResponsePricelist", t.toString());
             }
         });
 

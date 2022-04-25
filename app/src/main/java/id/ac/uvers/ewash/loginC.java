@@ -81,7 +81,7 @@ public class loginC extends AppCompatActivity {
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Log.e("Error.Response", error.toString());
+                            Log.e("Error.ResponsePricelist", error.toString());
                             Toast.makeText(loginC.this, "Periksa Koneksi Internet !", Toast.LENGTH_LONG).show();
                         }
                     });

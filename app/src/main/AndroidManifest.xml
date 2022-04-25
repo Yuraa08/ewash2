@@ -15,8 +15,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EWASH">
         <activity
+            android:name=".profil"
+            android:exported="false" />
+        <activity
+            android:name=".finalorder"
+            android:exported="false" />
+        <activity
+            android:name=".infolaundry"
+            android:exported="false" />
+        <activity
+            android:name=".orderlaundry"
+            android:exported="false" />
+        <activity
+            android:name=".detailLaundry"
+            android:exported="false" />
+        <activity
             android:name=".splashscreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,6 +47,10 @@
         <activity
             android:name=".loginC"
             android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
