@@ -21,7 +21,7 @@ public class adapterC extends RecyclerView.Adapter<adapterC.HolderData> {
     private Context ctx;
     private List<LaundrylistsItem> LaundrylistsItem;
     private int idlaundry;
-    private String id_lempar, namaln, jambk, jamttp, rate, selfdeliv, kurirdeliv;
+    private String id_lempar,userln, namaln, jambk, jamttp, rate, selfdeliv, kurirdeliv;
 
     public adapterC(Context ctx, List<LaundrylistsItem> LaundrylistsItem)
     {
@@ -46,6 +46,7 @@ public class adapterC extends RecyclerView.Adapter<adapterC.HolderData> {
         String kurirdel = lnl.getKurirdelivery();
 
         holder.id_laundry.setText(lnl.getIdLaundry());
+        holder.userlaundry.setText(lnl.getuserlaundry());
         holder.namalaundry.setText(String.valueOf(lnl.getNamalaundry()));
         holder.jambuka.setText(lnl.getJambuka());
         holder.jamtutup.setText(lnl.getJamtutup());
@@ -73,11 +74,12 @@ public class adapterC extends RecyclerView.Adapter<adapterC.HolderData> {
     }
 
     public class HolderData extends RecyclerView.ViewHolder {
-        TextView id_laundry, namalaundry, jambuka, jamtutup, rating, selfdelivery, kurirdelivery;
+        TextView id_laundry, userlaundry, namalaundry, jambuka, jamtutup, rating, selfdelivery, kurirdelivery;
 
         public HolderData(View itemView){
             super(itemView);
             id_laundry = itemView.findViewById(R.id.id_ln);
+            userlaundry = itemView.findViewById(R.id.userln);
             namalaundry = itemView.findViewById(R.id.laundryName);
             jambuka = itemView.findViewById(R.id.jamBuka);
             jamtutup = itemView.findViewById(R.id.jamTutup);
@@ -90,6 +92,7 @@ public class adapterC extends RecyclerView.Adapter<adapterC.HolderData> {
                 public void onClick(View view) {
                     idlaundry = Integer.valueOf(id_laundry.getText().toString());
                     id_lempar = String.valueOf(idlaundry);
+                    userln = userlaundry.getText().toString();
                     namaln = namalaundry.getText().toString();
                     jambk = jambuka.getText().toString();
                     jamttp = jamtutup.getText().toString();
@@ -99,6 +102,7 @@ public class adapterC extends RecyclerView.Adapter<adapterC.HolderData> {
 
                     Intent intent = new Intent(ctx, detailLaundry.class);
                     intent.putExtra("id_laundry",id_lempar);
+                    intent.putExtra("userlaundry",userln);
                     intent.putExtra("nama",namaln);
                     intent.putExtra("jambuka",jambk);
                     intent.putExtra("jamtutup",jamttp);

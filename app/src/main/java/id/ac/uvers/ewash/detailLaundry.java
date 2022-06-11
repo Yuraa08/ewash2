@@ -16,13 +16,13 @@ import id.ac.uvers.ewash.Adapter.orderlaundryAdapter;
 
 public class detailLaundry extends AppCompatActivity {
 
-    private String id_laundry,namalaundry;
-    TextView detailnamal;
+    private String id_laundry, namalaundry,userlaundry;
+    TextView detailnamal,userln;
     ImageView info, back;
     RadioGroup jangkawaktu, service;
-//    RadioButton normal, express, complete, cuciker, setrika, rbjw, rbs;
+    //    RadioButton normal, express, complete, cuciker, setrika, rbjw, rbs;
 //    private String rbnormal, rbexpress, rbcomplete, rbcuciker, rbsetrika, textrbjw, textrbjs;
-    private String str1, str2, strnama, str11, str22, strnama1;
+    private String str1, str2, strnama, str11, str22, strnama1,userldry;
     Button next;
     private Context ctx;
 
@@ -34,12 +34,14 @@ public class detailLaundry extends AppCompatActivity {
         Intent intent = getIntent();
         id_laundry = intent.getStringExtra("id_laundry");
         namalaundry = intent.getStringExtra("nama");
+        userlaundry = intent.getStringExtra("userlaundry");
 
         detailnamal = findViewById(R.id.namalaundrydetail);
         next = findViewById(R.id.btnnext);
         info = findViewById(R.id.btninfo);
         back = findViewById(R.id.btnback);
         jangkawaktu = findViewById(R.id.kategorilaundry);
+        userln = findViewById(R.id.userlaundry);
 //        normal = findViewById(R.id.ketNormal);
 //        express = findViewById(R.id.ketExpress);
 
@@ -50,34 +52,37 @@ public class detailLaundry extends AppCompatActivity {
 //        setrika = findViewById(R.id.tlsetrika);
 
         detailnamal.setText(namalaundry);
+        userln.setText(userlaundry);
 
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                str1 = ((RadioButton)findViewById(jangkawaktu.getCheckedRadioButtonId())).getText().toString().trim();
-                str2 = ((RadioButton)findViewById(service.getCheckedRadioButtonId())).getText().toString().trim();
-                str11 = ((RadioButton)findViewById(jangkawaktu.getCheckedRadioButtonId())).getText().toString().trim();
-                str22 = ((RadioButton)findViewById(service.getCheckedRadioButtonId())).getText().toString().trim();
+                str1 = ((RadioButton) findViewById(jangkawaktu.getCheckedRadioButtonId())).getText().toString().trim();
+                str2 = ((RadioButton) findViewById(service.getCheckedRadioButtonId())).getText().toString().trim();
+                str11 = ((RadioButton) findViewById(jangkawaktu.getCheckedRadioButtonId())).getText().toString().trim();
+                str22 = ((RadioButton) findViewById(service.getCheckedRadioButtonId())).getText().toString().trim();
                 strnama1 = detailnamal.getText().toString().trim();
                 strnama = detailnamal.getText().toString().trim();
-                Intent next = new Intent(getApplicationContext(),orderlaundry.class);
-                Intent order = new Intent(getApplicationContext(), orderlaundryAdapter.class);
-                next.putExtra("selectjw",str1);
-                next.putExtra("selects",str2);
-                next.putExtra("nama",strnama);
-                order.putExtra("kategori",str11);
-                order.putExtra("service",str22);
-                order.putExtra("namalaundry",strnama1);
+                userldry = userln.getText().toString().trim();
+                Intent next = new Intent(getApplicationContext(), orderlaundry.class);
+//                Intent order = new Intent(getApplicationContext(), orderlaundryAdapter.class);
+                next.putExtra("selectjw", str1);
+                next.putExtra("selects", str2);
+                next.putExtra("nama", strnama);
+                next.putExtra("userlaundry",userldry);
+//                order.putExtra("kategori", str11);
+//                order.putExtra("service", str22);
+//                order.putExtra("namalaundry", strnama1);
                 startActivity(next);
-                startActivity(order);
+//                startActivity(order);
             }
         });
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent info = new Intent(detailLaundry.this,infolaundry.class);
+                Intent info = new Intent(detailLaundry.this, infolaundry.class);
                 startActivity(info);
             }
         });
@@ -85,7 +90,7 @@ public class detailLaundry extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent back = new Intent(detailLaundry.this,mainMenu.class);
+                Intent back = new Intent(detailLaundry.this, mainMenu.class);
                 startActivity(back);
             }
         });

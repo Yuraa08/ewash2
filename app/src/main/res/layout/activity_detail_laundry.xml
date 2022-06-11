@@ -45,6 +45,17 @@
              android:textSize="30dp" />
 
          <TextView
+             android:id="@+id/userlaundry"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:fontFamily="@font/roboto_bold"
+             android:gravity="center"
+             android:text="detailnamalaundry"
+             android:textColor="@color/black"
+             android:textSize="30dp"
+             android:visibility="gone"/>
+
+         <TextView
              android:id="@+id/textView4"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"

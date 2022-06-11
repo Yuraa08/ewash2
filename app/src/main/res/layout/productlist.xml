@@ -6,560 +6,559 @@
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/laundry" />
-
-                <TextView
-                    android:id="@+id/bajuharian"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="Baju Harian"
-                    android:textColor="@color/black"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/hargabjhd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="hargabjh"
-                    android:textColor="@color/black"
-                    android:textSize="16dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/bjhmin"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_minus" />
-
-                    <EditText
-                        android:id="@+id/bjhqty"
-                        android:layout_width="35dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="5dp"
-                        android:digits="0123456789"
-                        android:ems="10"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:hint="0"
-                        android:inputType="numberSigned"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/black"
-                        android:textSize="18dp" />
-
-                    <ImageView
-                        android:id="@+id/bjhplus"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_plus" />
-
-                    <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/roboto_regular"
-                        android:text="KG"
-                        android:textColor="@color/black"
-                        android:textSize="20dp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lyboneka"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/boneka" />
-
-                <TextView
-                    android:id="@+id/boneka"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="Boneka"
-                    android:textColor="@color/black"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/hargabkd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="hargabk"
-                    android:textColor="@color/black"
-                    android:textSize="16dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/bkmin"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_minus" />
-
-                    <EditText
-                        android:id="@+id/bkqty"
-                        android:layout_width="35dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="5dp"
-                        android:ems="10"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:hint="0"
-                        android:inputType="number"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/black"
-                        android:textSize="18dp" />
-
-                    <ImageView
-                        android:id="@+id/bkplus"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_plus" />
-
-                    <TextView
-                        android:id="@+id/textView13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/roboto_regular"
-                        android:text="PC"
-                        android:textColor="@color/black"
-                        android:textSize="20dp" />
-                </LinearLayout>
-            </LinearLayout>
-
-
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/laundry" />
+
+            <TextView
+                android:id="@+id/bajuharian"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Baju Harian"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/hargabjhd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="hargabjh"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
 
             <LinearLayout
-                android:id="@+id/lybedcover"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:id="@+id/bjhmin"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/bedcover" />
+                    app:srcCompat="@drawable/ic_minus" />
 
-                <TextView
-                    android:id="@+id/bedcover"
-                    android:layout_width="150dp"
+                <EditText
+                    android:id="@+id/bjhqty"
+                    android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:digits="0123456789"
+                    android:ems="10"
                     android:fontFamily="@font/roboto_regular"
                     android:gravity="center"
-                    android:text="Bed Cover"
+                    android:hint="0"
+                    android:inputType="numberSigned"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/hargabcd"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="hargabc"
-                    android:textColor="@color/black"
-                    android:textSize="16dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/bcmin"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_minus" />
-
-                    <EditText
-                        android:id="@+id/bcqty"
-                        android:layout_width="35dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="5dp"
-                        android:ems="10"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:hint="0"
-                        android:inputType="number"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/black"
-                        android:textSize="18dp" />
-
-                    <ImageView
-                        android:id="@+id/bcplus"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_plus" />
-
-                    <TextView
-                        android:id="@+id/textView14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/roboto_regular"
-                        android:text="SET"
-                        android:textColor="@color/black"
-                        android:textSize="20dp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lyselimutb"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                    android:textColorHint="@color/black"
+                    android:textSize="18dp" />
 
                 <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:id="@+id/bjhplus"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/selimut" />
+                    app:srcCompat="@drawable/ic_plus" />
 
                 <TextView
-                    android:id="@+id/selimut1"
-                    android:layout_width="150dp"
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="Selimut Besar"
+                    android:text="KG"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/hargasld1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="hargasl1"
-                    android:textColor="@color/black"
-                    android:textSize="16dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/slmin1"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_minus" />
-
-                    <EditText
-                        android:id="@+id/slqty1"
-                        android:layout_width="35dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="5dp"
-                        android:ems="10"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:hint="0"
-                        android:inputType="number"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/black"
-                        android:textSize="18dp" />
-
-                    <ImageView
-                        android:id="@+id/slplus1"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_plus" />
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/roboto_regular"
-                        android:text="PC"
-                        android:textColor="@color/black"
-                        android:textSize="20dp" />
-                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lyboneka"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="15dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/boneka" />
+
+            <TextView
+                android:id="@+id/boneka"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Boneka"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/hargabkd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="hargabk"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
 
             <LinearLayout
-                android:id="@+id/lyselimutk"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:id="@+id/bkmin"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/selimut" />
+                    app:srcCompat="@drawable/ic_minus" />
+
+                <EditText
+                    android:id="@+id/bkqty"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/bkplus"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_plus" />
 
                 <TextView
-                    android:id="@+id/selimut2"
-                    android:layout_width="150dp"
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="Selimut Kecil"
+                    android:text="PC"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/hargasld2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="hargasl2"
-                    android:textColor="@color/black"
-                    android:textSize="16dp" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/slmin2"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_minus" />
-
-                    <EditText
-                        android:id="@+id/slqty2"
-                        android:layout_width="35dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="5dp"
-                        android:ems="10"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:hint="0"
-                        android:inputType="number"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/black"
-                        android:textSize="18dp" />
-
-                    <ImageView
-                        android:id="@+id/slplus2"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_plus" />
-
-                    <TextView
-                        android:id="@+id/textView16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/roboto_regular"
-                        android:text="PC"
-                        android:textColor="@color/black"
-                        android:textSize="20dp" />
-                </LinearLayout>
-
             </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lybedcover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/bedcover" />
+
+            <TextView
+                android:id="@+id/bedcover"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Bed Cover"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/hargabcd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="hargabc"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
 
             <LinearLayout
-                android:id="@+id/lygorden"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:id="@+id/bcmin"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/gorden" />
+                    app:srcCompat="@drawable/ic_minus" />
+
+                <EditText
+                    android:id="@+id/bcqty"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/bcplus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_plus" />
 
                 <TextView
-                    android:id="@+id/gorden"
-                    android:layout_width="150dp"
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="Gorden"
+                    android:text="SET"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/hargagrd"
-                    android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/lyselimutb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/selimut" />
+
+            <TextView
+                android:id="@+id/selimut1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Selimut Besar"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/hargasld1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="hargasl1"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/slmin1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_minus" />
+
+                <EditText
+                    android:id="@+id/slqty1"
+                    android:layout_width="35dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:ems="10"
                     android:fontFamily="@font/roboto_regular"
                     android:gravity="center"
-                    android:text="hargagr"
+                    android:hint="0"
+                    android:inputType="number"
                     android:textColor="@color/black"
-                    android:textSize="16dp" />
+                    android:textColorHint="@color/black"
+                    android:textSize="18dp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <ImageView
+                    android:id="@+id/slplus1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_plus" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="PC"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lyselimutk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/selimut" />
+
+            <TextView
+                android:id="@+id/selimut2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Selimut Kecil"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/hargasld2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="hargasl2"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/slmin2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_minus" />
+
+                <EditText
+                    android:id="@+id/slqty2"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_regular"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:hint="0"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="18dp" />
 
-                    <ImageView
-                        android:id="@+id/grmin"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_minus" />
+                <ImageView
+                    android:id="@+id/slplus2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_plus" />
 
-                    <EditText
-                        android:id="@+id/grqty"
-                        android:layout_width="35dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="5dp"
-                        android:ems="10"
-                        android:fontFamily="@font/roboto_regular"
-                        android:gravity="center"
-                        android:hint="0"
-                        android:inputType="number"
-                        android:textColor="@color/black"
-                        android:textColorHint="@color/black"
-                        android:textSize="18dp" />
-
-                    <ImageView
-                        android:id="@+id/grplus"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_gravity="center"
-                        app:srcCompat="@drawable/ic_plus" />
-
-                    <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/roboto_regular"
-                        android:text="PC"
-                        android:textColor="@color/black"
-                        android:textSize="20dp" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="PC"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
             </LinearLayout>
 
         </LinearLayout>
 
-    <TextView
-        android:id="@+id/kategori1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
-        android:textColor="@color/black"
-        android:layout_marginStart="20dp"
-        android:textSize="20dp"
-        android:text="kategori"
-        />
+        <LinearLayout
+            android:id="@+id/lygorden"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/service1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:text="service"
-        />
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/gorden" />
 
-    <TextView
-        android:id="@+id/namalaundrytest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:text="nama"
-        />
+            <TextView
+                android:id="@+id/gorden"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="Gorden"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/hargagrd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="hargagr"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/grmin"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_minus" />
+
+                <EditText
+                    android:id="@+id/grqty"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/grplus"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_plus" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="PC"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/kategori1"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fontFamily="@font/roboto_regular"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:layout_marginStart="20dp"-->
+    <!--        android:textSize="20dp"-->
+    <!--        android:text="kategori"-->
+    <!--        />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/service1"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fontFamily="@font/roboto_regular"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="20dp"-->
+    <!--        android:text="service"-->
+    <!--        />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/namalaundrytest"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:fontFamily="@font/roboto_regular"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="20dp"-->
+    <!--        android:text="nama"-->
+    <!--        />-->
 
 </LinearLayout>
-

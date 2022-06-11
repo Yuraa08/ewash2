@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class LaundrylistsItem{
 
+	@SerializedName("userlaundry")
+	private String userlaundry;
+
 	@SerializedName("jambuka")
 	private String jambuka;
 
@@ -25,6 +28,14 @@ public class LaundrylistsItem{
 	@SerializedName("kurirdelivery")
 	private String kurirdelivery;
 
+
+	public void setuserlaundry(String userlaundry){
+		this.userlaundry = userlaundry;
+	}
+
+	public String getuserlaundry(){
+		return userlaundry;
+	}
 
 	public void setJambuka(String jambuka){
 		this.jambuka = jambuka;

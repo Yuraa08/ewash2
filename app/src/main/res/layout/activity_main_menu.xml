@@ -8,9 +8,11 @@
     tools:context=".mainMenu">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -19,10 +21,11 @@
             android:paddingTop="10dp">
 
             <LinearLayout
+                android:id="@+id/lokasiC"
                 android:layout_width="240dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_marginLeft="45dp"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
@@ -30,21 +33,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Lokasi Anda :"
                     android:fontFamily="casual"
+                    android:text="Lokasi Anda :"
                     android:textColor="@color/black"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtCAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="lokasi"
                     android:fontFamily="casual"
+                    android:text="lokasi"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="18dp"/>
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <ImageView
@@ -66,7 +69,8 @@
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swprf"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="80dp">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rclaundrylist"
@@ -77,6 +81,5 @@
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
