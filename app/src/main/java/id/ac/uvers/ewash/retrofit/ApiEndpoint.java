@@ -1,5 +1,6 @@
 package id.ac.uvers.ewash.retrofit;
 
+import id.ac.uvers.ewash.model.response.ResponseDatauser;
 import id.ac.uvers.ewash.model.response.laundrylist.Responselaundrylist;
 
 import id.ac.uvers.ewash.model.response.pricelist.ResponsePricelist;
@@ -18,7 +19,7 @@ public interface ApiEndpoint {
     @GET("pricelist.php")
     Call<ResponsePricelist> pllist(@Query("namalaundry") String namalaundry);
 
-//    @GET("pricelistaa.php")
-//    Call<ResponsePricelist> pllist(@Query("userlaundry") String userlaundry);
+    @GET("datauser.php")
+    Call<ResponseDatauser> datauser(@Query("username") String username);
 
 }

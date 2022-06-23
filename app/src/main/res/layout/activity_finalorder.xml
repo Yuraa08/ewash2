@@ -339,8 +339,19 @@
                 android:textColor="@color/black" />
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/thargafinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:text="thargafinal"
+            android:textColor="@color/black" />
+
         <Button
-            android:id="@+id/finalorder"
+            android:id="@+id/btnfinalorder"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

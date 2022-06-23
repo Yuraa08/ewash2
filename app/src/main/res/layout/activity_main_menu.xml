@@ -46,8 +46,30 @@
                     android:fontFamily="casual"
                     android:text="lokasi"
                     android:textColor="@color/black"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtCAddlat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:text="lokasi"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/txtCAddlang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:text="lokasi"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
             </LinearLayout>
 
             <ImageView

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.ApiException;
@@ -51,11 +53,18 @@ public class mainMenu extends AppCompatActivity {
     private SwipeRefreshLayout refreshdata;
     LinearLayout lokasiC;
     ImageView account, history;
+    TextView address, addlat, addlang;
+    String lat, lang, alamat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        Intent intent = getIntent();
+        alamat = intent.getStringExtra("alamat");
+        lat = intent.getStringExtra("lat");
+        lang = intent.getStringExtra("lang");
 
         recyclerView = findViewById(R.id.rclaundrylist);
         refreshdata = findViewById(R.id.swprf);
@@ -64,17 +73,29 @@ public class mainMenu extends AppCompatActivity {
         account = findViewById(R.id.btnprofilll);
         history = findViewById(R.id.btnhistoryll);
         lokasiC = findViewById(R.id.lokasiC);
+        address = findViewById(R.id.txtCAdd);
 
         refreshdata.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 refreshdata.setRefreshing(true);
                 tp_data();
+//                address.setText(alamat);
+//                addlat.setText(lat);
+//                addlang.setText(lang);
                 refreshdata.setRefreshing(false);
             }
         });
 
         getlocation ();
+
+        address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent adr = new Intent(mainMenu.this,mapsActivity.class);
+                startActivity(adr);
+            }
+        });
 
         account.setOnClickListener(new View.OnClickListener() {
             @Override

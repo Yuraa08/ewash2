@@ -1,22 +1,40 @@
 package id.ac.uvers.ewash;
 
+import static android.widget.Toast.LENGTH_LONG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Layout;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class finalorder extends AppCompatActivity {
 
     private String userlaundryy, strnama, strkategori, strservice, strqbjh, strqbk, strqbc, strqsl, strqsl2, strqgr;
     private String strhargabjh, strhargabk, strhargabc, strhargasl1, strhargasl2, strhargagr;
+    private String id_laundrydata,user,namalaundry, tgltrans, bajuharian, boneka, bedcover, selimutb, selimutk, gorden, totaltrans, deliveryterm, alamat, kategori, service, payment;
 
-    TextView namalaundry, namauser, alamatuser, kategori, service;
+    TextView namalaundry1, namauser, alamatuser, kategori1, service1;
     TextView qtybjh, qtybk, qtybc, qtyslb, qtyslk, qtygr;
     TextView hargabjh, hargabk, hargabc, hargaslb, hargaslk, hargagr;
+    Button confirm;
 
     LinearLayout laybjhfinal, laybkfinal, laybcfinal, layslbfinal, layslkfinal, laygrfinal;
 
@@ -43,11 +61,12 @@ public class finalorder extends AppCompatActivity {
         strhargasl2 = order.getStringExtra("hargasl2");
         strhargagr = order.getStringExtra("hargagr");
 
-        namalaundry = findViewById(R.id.namalaundryfinal);
+        namalaundry1 = findViewById(R.id.namalaundryfinal);
         namauser = findViewById(R.id.namauserfinal);
         alamatuser = findViewById(R.id.alamatuserfinal);
-        kategori = findViewById(R.id.kategorifinal);
-        service = findViewById(R.id.servicefinal);
+        kategori1 = findViewById(R.id.kategorifinal);
+        service1 = findViewById(R.id.servicefinal);
+        confirm = findViewById(R.id.btnfinalorder);
 
         /*qty*/
         qtybjh = findViewById(R.id.bjhqtyfinal);
@@ -74,11 +93,11 @@ public class finalorder extends AppCompatActivity {
         laygrfinal = findViewById(R.id.laygrfinal);
 
         /*set*/
-        namalaundry.setText(strnama);
+        namalaundry1.setText(strnama);
 //        namauser.setText();
 //        alamatuser.setText();
-        kategori.setText(strkategori);
-        service.setText(strservice);
+        kategori1.setText(strkategori);
+        service1.setText(strservice);
 
         /*set qty*/
         qtybjh.setText(strqbjh);
@@ -95,6 +114,44 @@ public class finalorder extends AppCompatActivity {
         hargaslb.setText(strhargasl1);
         hargaslk.setText(strhargasl2);
         hargagr.setText(strhargagr);
+
+        getuserdata ();
+
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                RequestQueue rq = Volley.newRequestQueue(getApplicationContext());
+                JsonObjectRequest jar = new JsonObjectRequest(Request.Method.GET,
+                        urlcrud.insertFinalorder(id_laundrydata, user,namalaundry, tgltrans, bajuharian, boneka, bedcover, selimutb, selimutk, gorden,totaltrans, deliveryterm, alamat, kategori, service, payment), null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            int berhasil = response.getInt("sukses");
+                            String pesan = response.getString("pesan");
+                            Toast.makeText(finalorder.this, pesan, LENGTH_LONG).show();
+                            Intent i = new Intent(finalorder.this, mainMenu.class);
+                            i.putExtra("namalaundry",namalaundry);
+                            startActivity(i);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("Error.response", error.toString());
+                        Toast.makeText(finalorder.this, "Periksa Koneksi Internet Anda !", LENGTH_LONG).show();
+
+                    }
+                });
+                rq.add(jar);
+            }
+        });
+
+    }
+
+    private void getuserdata() {
 
     }
 }

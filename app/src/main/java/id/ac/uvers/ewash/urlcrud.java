@@ -18,5 +18,8 @@ public class urlcrud {
         return Uri.encode("https://ewash22.000webhostapp.com/databaseewash/selectlaundry.php?");
     }
 
+    public static String insertFinalorder (String id_laundrydata,String user,String namalaundry, String tgltrans, String bajuharian, String boneka, String bedcover, String selimutb, String selimutk, String gorden,String totaltrans, String deliveryterm, String alamat, String kategori, String service, String payment){
+        return Uri.encode("https://ewash22.000webhostapp.com/databaseewash/simpan.php?id_laundrydata="+id_laundrydata+"&user="+user+"&namalaundry="+namalaundry+"&tgltrans="+tgltrans+"&bajuharian="+bajuharian+"&boneka="+boneka+"&bedcover="+bedcover+"&selimutb="+selimutb+"&selimutk="+selimutk+"&gorden="+gorden+"&totaltrans="+totaltrans+"&deliveryterm="+deliveryterm+"&alamat="+alamat+"&kategori="+kategori+"&service="+service+"&payment="+payment, tandaBaca);
+    }
 
 }
